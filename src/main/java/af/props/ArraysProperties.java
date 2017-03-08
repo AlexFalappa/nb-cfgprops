@@ -19,14 +19,17 @@ public class ArraysProperties {
      * An array of integers.
      */
     private int[] intArray;
+
     /**
      * An array of characters.
      */
     private char[] charArray;
+
     /**
      * An array of floats.
      */
     private float[] floatArray;
+
     /**
      * An array of strings.
      */

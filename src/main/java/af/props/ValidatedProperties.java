@@ -29,28 +29,33 @@ public class ValidatedProperties {
      */
     @NotEmpty
     private String notEmpty;
+
     /**
      * Non null character.
      */
     @NotNull
     private Character notNull;
+
     /**
      * Integer in the [0-10] inclusive range.
      */
     @Range(min = 0, max = 10)
     private Integer inRange;
+
     /**
      * Non null string with length from 4 to 8.
      */
     @NotNull
     @Length(min = 4, max = 8)
     private String lengthInRange;
+
     /**
      * Non null string representing an URL.
      */
     @URL
     @NotNull
     private String urlString;
+
     /**
      * A point as an array of exactly two double numbers.
      */

@@ -28,11 +28,13 @@ public class CollectionsProperties {
     @Getter
     @Setter
     private Set<Double> set = new HashSet<>();
+
     /**
      * A list of strings.
      */
     @Getter
     private List<String> list = new ArrayList<>();
+
     /**
      * A map of strings indexed by integers.
      */
