@@ -1,0 +1,65 @@
+{
+    "hints": [
+        {
+            "name": "hinted.map.keys",
+            "values": [
+                {
+                    "value": "Alice",
+                    "description": "Mother"
+                },
+                {
+                    "value": "Bob",
+                    "description": "Father"
+                },
+                {
+                    "value": "Carl",
+                    "description": "Son"
+                },
+                {
+                    "value": "Debbie",
+                    "description": "Daughter"
+                }
+            ]
+        },
+        {
+            "name": "hinted.map.values",
+            "values": [
+                {
+                    "value": "cat",
+                    "description": "Cats are for women"
+                },
+                {
+                    "value": "dog",
+                    "description": "Best man friend"
+                },
+                {
+                    "value": "parrot",
+                    "description": "Pirate pet"
+                },
+                {
+                    "value": "rabbit",
+                    "description": "Always late"
+                }
+            ]
+        },
+        {
+            "name": "hinted.name",
+            "values": [
+                {
+                    "value": "Alexander"
+                },
+                {
+                    "value": "Brett"
+                },
+                {
+                    "value": "Carl"
+                }
+            ],
+            "providers": [
+                {
+                    "name": "any"
+                }
+            ]
+        }
+    ]
+}
