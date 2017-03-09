@@ -28,7 +28,42 @@ public class HintedProperties {
     /**
      * A person name.
      * <p>
-     * Should have three hints but can have other values.
+     * Has a value provider of type <tt>any</tt> and three value hints. Default value is one of the hints.
      */
-    private String name;
+    private String name = "Alexander";
+
+    /**
+     * A logger name.
+     * <p>
+     * Has a value provider of type <tt>logger-name</tt>
+     */
+    private String myLogger;
+
+    /**
+     * A Swing GUI widget class name.
+     * <p>
+     * Has a value provider of type <tt>class-reference</tt> with target <tt>javax.swing.JComponent</tt>
+     */
+    private String swingComponent;
+
+    /**
+     * A string representing a locale.
+     * <p>
+     * Has a value provider of type <tt>handle-as</tt> with target <tt>java.util.Locale</tt>
+     */
+    private String myLocale;
+
+    /**
+     * A string representing a character encoding.
+     * <p>
+     * Has a value provider of type <tt>handle-as</tt> with target <tt>java.nio.charset.Charset</tt>
+     */
+    private String myCharset;
+
+    /**
+     * A string representing an external resource (conforming to the Spring Resource abstraction).
+     * <p>
+     * Has a value provider of type <tt>handle-as</tt> with target <tt>org.springframework.core.io.Resource</tt>
+     */
+    private String configSource;
 }

@@ -60,6 +60,58 @@
                     "name": "any"
                 }
             ]
+        },
+        {
+            "name": "hinted.my-logger",
+            "providers": [
+                {
+                    "name": "logger-name"
+                }
+            ]
+        },
+        {
+            "name": "hinted.swing-component",
+            "providers": [
+                {
+                    "name": "class-reference",
+                    "parameters": {
+                        "target": "javax.swing.JComponent"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hinted.my-locale",
+            "providers": [
+                {
+                    "name": "handle-as",
+                    "parameters": {
+                        "target": "java.util.Locale"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hinted.my-charset",
+            "providers": [
+                {
+                    "name": "handle-as",
+                    "parameters": {
+                        "target": "java.nio.charset.Charset"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "hinted.config-source",
+            "providers": [
+                {
+                    "name": "handle-as",
+                    "parameters": {
+                        "target": "org.springframework.core.io.Resource"
+                    }
+                }
+            ]
         }
     ]
 }
