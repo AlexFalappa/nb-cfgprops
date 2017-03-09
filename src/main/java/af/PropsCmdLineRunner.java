@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import af.props.ArraysProperties;
 import af.props.CollectionsProperties;
+import af.props.ComplexTypesProperties;
 import af.props.ObjectTypesProperties;
 import af.props.PrimitiveTypesProperties;
 import af.props.ValidatedProperties;
@@ -22,7 +23,7 @@ import af.props.ValidatedProperties;
 @Component
 @EnableConfigurationProperties({
     PrimitiveTypesProperties.class, ObjectTypesProperties.class, ArraysProperties.class,
-    CollectionsProperties.class, ValidatedProperties.class
+    CollectionsProperties.class, ValidatedProperties.class, ComplexTypesProperties.class
 })
 public class PropsCmdLineRunner implements CommandLineRunner {
 
@@ -32,14 +33,16 @@ public class PropsCmdLineRunner implements CommandLineRunner {
     private final ArraysProperties arrays;
     private final CollectionsProperties collections;
     private final ValidatedProperties validated;
+    private final ComplexTypesProperties complex;
 
     public PropsCmdLineRunner(PrimitiveTypesProperties primitives, ObjectTypesProperties objects, ArraysProperties arrays,
-            CollectionsProperties collections, ValidatedProperties validated) {
+            CollectionsProperties collections, ValidatedProperties validated, ComplexTypesProperties complex) {
         this.primitives = primitives;
         this.objects = objects;
         this.arrays = arrays;
         this.collections = collections;
         this.validated = validated;
+        this.complex = complex;
     }
 
     @Override
@@ -68,17 +71,20 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("array of integers: {}", Arrays.toString(arrays.getIntArray()));
         logger.info("array of floats: {}", Arrays.toString(arrays.getFloatArray()));
         logger.info("array of strings: {}", Arrays.toString(arrays.getStringArray()));
-        logger.info("********* COLLECTIONS *********");
+        logger.info("********* COLLECTIONS **********");
         logger.info("set: {}", collections.getSet().toString());
         logger.info("list: {}", collections.getList().toString());
         logger.info("map: {}", collections.getMap().toString());
-        logger.info("********* VALIDATED *********");
+        logger.info("********** VALIDATED ***********");
         logger.info("not empty: {}", validated.getNotEmpty());
         logger.info("in range: {}", validated.getInRange().toString());
         logger.info("not null: {}", validated.getNotNull().toString());
         logger.info("length in range: {}", validated.getLengthInRange());
         logger.info("URL string: {}", validated.getUrlString());
         logger.info("point: {}", Arrays.toString(validated.getPoint()));
+        logger.info("*********** COMPLEX ************");
+        logger.info("suit: {}", complex.getSuit());
+        logger.info("copy option: {}", complex.getCopyOption());
     }
 
 }
