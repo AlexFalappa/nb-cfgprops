@@ -1,4 +1,15 @@
 {
+    "properties": [
+        {
+            "name": "deprecated.removed-string",
+            "type": "java.lang.String",
+            "description": "Property not used anymore.",
+            "deprecation": {
+                "level": "ERROR",
+                "replacement": "deprecated.replacement-string"
+            }
+        }
+    ],
     "hints": [
         {
             "name": "hinted.map.keys",
