@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -26,19 +27,24 @@ public class CollectionsProperties {
      * A set of doubles.
      */
     @Getter
-    @Setter
-    private Set<Double> set = new HashSet<>();
+    private final Set<Double> set = new HashSet<>();
 
     /**
      * A list of strings.
      */
     @Getter
-    private List<String> list = new ArrayList<>();
+    private final List<String> list = new ArrayList<>();
 
     /**
      * A map of strings indexed by integers.
      */
     @Getter
-    private Map<Integer, String> map = new HashMap<>();
+    private final Map<Integer, String> map = new HashMap<>();
+
+    /**
+     * A map of card suits indexed by integers.
+     */
+    @Getter
+    private final Map<Integer, CardSuit> cardMap = new TreeMap<>();
 
 }
