@@ -1,6 +1,3 @@
-/*
- * Unlicensed
- */
 package af.props;
 
 /**

@@ -11,7 +11,6 @@ import java.util.TreeMap;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Java collections.
