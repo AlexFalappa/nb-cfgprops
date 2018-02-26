@@ -46,4 +46,10 @@ public class CollectionsProperties {
     @Getter
     private final Map<Integer, CardSuit> cardMap = new TreeMap<>();
 
+    /**
+     * A map of ages (integers) indexed by names (strings).
+     */
+    @Getter
+    private final Map<String, String> agesMap = new HashMap<>();
+
 }

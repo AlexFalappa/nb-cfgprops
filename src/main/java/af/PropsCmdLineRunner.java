@@ -76,6 +76,7 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("list: {}", collections.getList().toString());
         logger.info("map: {}", collections.getMap().toString());
         logger.info("cardMap: {}", collections.getCardMap().toString());
+        logger.info("agesMap: {}", collections.getAgesMap().toString());
         logger.info("********** VALIDATED ***********");
         logger.info("not empty: {}", validated.getNotEmpty());
         logger.info("in range: {}", validated.getInRange().toString());
