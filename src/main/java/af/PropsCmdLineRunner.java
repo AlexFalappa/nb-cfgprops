@@ -24,7 +24,8 @@ import af.props.ValidatedProperties;
 @Component
 @EnableConfigurationProperties({
     PrimitiveTypesProperties.class, ObjectTypesProperties.class, ArraysProperties.class,
-    CollectionsProperties.class, ValidatedProperties.class, ComplexTypesProperties.class
+    CollectionsProperties.class, ValidatedProperties.class, ComplexTypesProperties.class,
+    HintedProperties.class
 })
 public class PropsCmdLineRunner implements CommandLineRunner {
 
@@ -35,15 +36,18 @@ public class PropsCmdLineRunner implements CommandLineRunner {
     private final CollectionsProperties collections;
     private final ValidatedProperties validated;
     private final ComplexTypesProperties complex;
+    private final HintedProperties hinted;
 
     public PropsCmdLineRunner(PrimitiveTypesProperties primitives, ObjectTypesProperties objects, ArraysProperties arrays,
-            CollectionsProperties collections, ValidatedProperties validated, ComplexTypesProperties complex) {
+            CollectionsProperties collections, ValidatedProperties validated, ComplexTypesProperties complex,
+            HintedProperties hinted) {
         this.primitives = primitives;
         this.objects = objects;
         this.arrays = arrays;
         this.collections = collections;
         this.validated = validated;
         this.complex = complex;
+        this.hinted = hinted;
     }
 
     @Override
@@ -91,6 +95,14 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("copy option: {}", complex.getCopyOption());
         logger.info("a file: {}", complex.getAFile());
         logger.info("a path: {}", complex.getAPath());
+        logger.info("*********** HINTED ************");
+        logger.info("hinted name: {}", hinted.getConfigSource());
+        logger.info("hinted map: {}", hinted.getMap());
+        logger.info("hinted my charset: {}", hinted.getMyCharset());
+        logger.info("hinted my locale: {}", hinted.getMyLocale());
+        logger.info("hinted my logger: {}", hinted.getMyLogger());
+        logger.info("hinted name: {}", hinted.getName());
+        logger.info("hinted swing component: {}", hinted.getSwingComponent());
     }
 
 }

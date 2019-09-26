@@ -21,7 +21,7 @@ public class HintedProperties {
     /**
      * A map of strings indexed by strings.
      * <p>
-     * Keys should be person names, values should be pet animals.
+     * Has key hints for person names and value hints for pet animals.
      */
     private Map<String, String> map = new HashMap<>();
 
