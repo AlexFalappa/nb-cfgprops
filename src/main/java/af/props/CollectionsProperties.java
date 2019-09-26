@@ -47,6 +47,12 @@ public class CollectionsProperties {
     private final Map<Integer, CardSuit> cardMap = new TreeMap<>();
 
     /**
+     * A map of booleans indexed by card suits.
+     */
+    @Getter
+    private final Map<CardSuit,Boolean> booleanMap = new TreeMap<>();
+
+    /**
      * A map of ages (integers) indexed by names (strings).
      */
     @Getter

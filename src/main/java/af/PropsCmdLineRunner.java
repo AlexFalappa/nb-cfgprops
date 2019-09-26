@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import af.props.ArraysProperties;
 import af.props.CollectionsProperties;
 import af.props.ComplexTypesProperties;
+import af.props.HintedProperties;
 import af.props.ObjectTypesProperties;
 import af.props.PrimitiveTypesProperties;
 import af.props.ValidatedProperties;
@@ -77,6 +78,7 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("map: {}", collections.getMap().toString());
         logger.info("cardMap: {}", collections.getCardMap().toString());
         logger.info("agesMap: {}", collections.getAgesMap().toString());
+        logger.info("booleanMap: {}", collections.getBooleanMap().toString());
         logger.info("********** VALIDATED ***********");
         logger.info("not empty: {}", validated.getNotEmpty());
         logger.info("in range: {}", validated.getInRange().toString());
