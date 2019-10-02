@@ -96,12 +96,13 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("a file: {}", complex.getAFile());
         logger.info("a path: {}", complex.getAPath());
         logger.info("*********** HINTED ************");
-        logger.info("hinted name: {}", hinted.getConfigSource());
+        logger.info("hinted config source: {}", hinted.getConfigSource());
         logger.info("hinted map: {}", hinted.getMap());
         logger.info("hinted my charset: {}", hinted.getMyCharset());
         logger.info("hinted my locale: {}", hinted.getMyLocale());
         logger.info("hinted my logger: {}", hinted.getMyLogger());
         logger.info("hinted name: {}", hinted.getName());
+        logger.info("hinted open option: {}", hinted.getOpenOption());
         logger.info("hinted swing component: {}", hinted.getSwingComponent());
     }
 

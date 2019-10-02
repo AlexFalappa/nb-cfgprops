@@ -123,6 +123,17 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "hinted.open-option",
+            "providers": [
+                {
+                    "name": "handle-as",
+                    "parameters": {
+                        "target": "java.nio.file.StandardOpenOption"
+                    }
+                }
+            ]
         }
     ]
 }

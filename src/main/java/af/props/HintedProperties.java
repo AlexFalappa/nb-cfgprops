@@ -66,4 +66,12 @@ public class HintedProperties {
      * Has a value provider of type <tt>handle-as</tt> with target <tt>org.springframework.core.io.Resource</tt>
      */
     private String configSource;
+
+    /**
+     * A string representing values of an <tt>StandardOpenOption</tt> enumeration.
+     * <p>
+     * Has a value provider of type <tt>handle-as</tt> with target <tt>java.nio.file.StandardOpenOption</tt>
+     */
+    private String openOption;
+    
 }
