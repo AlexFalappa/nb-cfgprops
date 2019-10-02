@@ -102,6 +102,7 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("hinted my locale: {}", hinted.getMyLocale());
         logger.info("hinted my logger: {}", hinted.getMyLogger());
         logger.info("hinted name: {}", hinted.getName());
+        logger.info("hinted names: {}", hinted.getNames());
         logger.info("hinted open option: {}", hinted.getOpenOption());
         logger.info("hinted swing component: {}", hinted.getSwingComponent());
     }

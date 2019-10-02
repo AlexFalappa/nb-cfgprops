@@ -73,6 +73,28 @@
             ]
         },
         {
+            "name": "hinted.names",
+            "values": [
+                {
+                    "value": "David"
+                },
+                {
+                    "value": "Emmett"
+                },
+                {
+                    "value": "Frank"
+                },
+                {
+                    "value": "George"
+                }
+            ],
+            "providers": [
+                {
+                    "name": "any"
+                }
+            ]
+        },
+        {
             "name": "hinted.my-logger",
             "providers": [
                 {

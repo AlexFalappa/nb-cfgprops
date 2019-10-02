@@ -1,6 +1,8 @@
 package af.props;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -15,7 +17,6 @@ import lombok.Setter;
  */
 @ConfigurationProperties(prefix = "hinted")
 @Getter
-@Setter
 public class HintedProperties {
 
     /**
@@ -30,13 +31,22 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>any</tt> and three value hints. Default value is one of the hints.
      */
+    @Setter
     private String name = "Alexander";
+
+    /**
+     * A list of person names.
+     * <p>
+     * Has a value provider of type <tt>any</tt> and four value hints.
+     */
+    private List<String> names = new ArrayList<>();
 
     /**
      * A logger name.
      * <p>
      * Has a value provider of type <tt>logger-name</tt>
      */
+    @Setter
     private String myLogger;
 
     /**
@@ -44,6 +54,7 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>class-reference</tt> with target <tt>javax.swing.JComponent</tt>
      */
+    @Setter
     private String swingComponent;
 
     /**
@@ -51,6 +62,7 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>handle-as</tt> with target <tt>java.util.Locale</tt>
      */
+    @Setter
     private String myLocale;
 
     /**
@@ -58,6 +70,7 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>handle-as</tt> with target <tt>java.nio.charset.Charset</tt>
      */
+    @Setter
     private String myCharset;
 
     /**
@@ -65,6 +78,7 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>handle-as</tt> with target <tt>org.springframework.core.io.Resource</tt>
      */
+    @Setter
     private String configSource;
 
     /**
@@ -72,6 +86,7 @@ public class HintedProperties {
      * <p>
      * Has a value provider of type <tt>handle-as</tt> with target <tt>java.nio.file.StandardOpenOption</tt>
      */
+    @Setter
     private String openOption;
     
 }
