@@ -95,6 +95,7 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("copy option: {}", complex.getCopyOption());
         logger.info("a file: {}", complex.getAFile());
         logger.info("a path: {}", complex.getAPath());
+        logger.info("a charset: {}", complex.getACharset());
         logger.info("*********** HINTED ************");
         logger.info("hinted config source: {}", hinted.getConfigSource());
         logger.info("hinted map: {}", hinted.getMap());

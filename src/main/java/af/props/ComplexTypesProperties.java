@@ -1,6 +1,7 @@
 package af.props;
 
 import java.io.File;
+import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 
@@ -39,4 +40,8 @@ public class ComplexTypesProperties {
      */
     private Path aPath;
 
+    /**
+     * A {@code java.nio.charset.Charset} object.
+     */
+    private Charset aCharset;
 }
