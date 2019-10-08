@@ -1,9 +1,11 @@
 package af.props;
 
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
@@ -11,6 +13,7 @@ import java.util.TreeMap;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import lombok.Getter;
+import org.springframework.util.MimeType;
 
 /**
  * Java collections.
@@ -35,6 +38,12 @@ public class CollectionsProperties {
     private final List<String> list = new ArrayList<>();
 
     /**
+     * A map of ages (integers) indexed by names (strings).
+     */
+    @Getter
+    private final Map<String, String> agesMap = new HashMap<>();
+
+    /**
      * A map of strings indexed by integers.
      */
     @Getter
@@ -53,9 +62,15 @@ public class CollectionsProperties {
     private final Map<CardSuit,Boolean> booleanMap = new TreeMap<>();
 
     /**
-     * A map of ages (integers) indexed by names (strings).
+     * A map of locales indexed by boolean.
      */
     @Getter
-    private final Map<String, String> agesMap = new HashMap<>();
+    private final Map<Boolean, Locale> localeMap = new TreeMap<>();
+
+    /**
+     * A map of mimetypes indexed by charsets.
+     */
+    @Getter
+    private final Map<Charset,MimeType> mimetypeMap = new TreeMap<>();
 
 }

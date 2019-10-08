@@ -77,12 +77,14 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("array of floats: {}", Arrays.toString(arrays.getFloatArray()));
         logger.info("array of strings: {}", Arrays.toString(arrays.getStringArray()));
         logger.info("********* COLLECTIONS **********");
-        logger.info("set: {}", collections.getSet().toString());
-        logger.info("list: {}", collections.getList().toString());
-        logger.info("map: {}", collections.getMap().toString());
-        logger.info("cardMap: {}", collections.getCardMap().toString());
         logger.info("agesMap: {}", collections.getAgesMap().toString());
         logger.info("booleanMap: {}", collections.getBooleanMap().toString());
+        logger.info("cardMap: {}", collections.getCardMap().toString());
+        logger.info("list: {}", collections.getList().toString());
+        logger.info("localeMap: {}", collections.getLocaleMap().toString());
+        logger.info("map: {}", collections.getMap().toString());
+        logger.info("mimetypeMap: {}", collections.getMimetypeMap().toString());
+        logger.info("set: {}", collections.getSet().toString());
         logger.info("********** VALIDATED ***********");
         logger.info("not empty: {}", validated.getNotEmpty());
         logger.info("in range: {}", validated.getInRange().toString());
