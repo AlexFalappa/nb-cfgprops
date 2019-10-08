@@ -74,6 +74,14 @@ public class HintedProperties {
     private String myCharset;
 
     /**
+     * A string representing a MIME type.
+     * <p>
+     * Has a value provider of type <tt>handle-as</tt> with target <tt>org.springframework.util.MimeType</tt>
+     */
+    @Setter
+    private String myContentType;
+
+    /**
      * A string representing an external resource (conforming to the Spring Resource abstraction).
      * <p>
      * Has a value provider of type <tt>handle-as</tt> with target <tt>org.springframework.core.io.Resource</tt>

@@ -136,6 +136,17 @@
             ]
         },
         {
+            "name": "hinted.my-content-type",
+            "providers": [
+                {
+                    "name": "handle-as",
+                    "parameters": {
+                        "target": "org.springframework.util.MimeType"
+                    }
+                }
+            ]
+        },
+        {
             "name": "hinted.config-source",
             "providers": [
                 {
