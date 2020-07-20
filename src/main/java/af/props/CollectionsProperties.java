@@ -17,8 +17,6 @@ import org.springframework.util.MimeType;
 
 /**
  * Java collections.
- * <p>
- * The {@code set} field has the setter to support initialization from a string of comma separated values.
  *
  * @author Alessandro Falappa
  */
