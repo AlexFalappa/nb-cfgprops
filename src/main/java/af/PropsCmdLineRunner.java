@@ -5,7 +5,6 @@ import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import af.props.ArraysProperties;
@@ -14,6 +13,7 @@ import af.props.ComplexTypesProperties;
 import af.props.HintedProperties;
 import af.props.ObjectTypesProperties;
 import af.props.PrimitiveTypesProperties;
+import af.props.UnitTypesProperties;
 import af.props.ValidatedProperties;
 
 /**
@@ -22,11 +22,6 @@ import af.props.ValidatedProperties;
  * @author Alessandro Falappa
  */
 @Component
-@EnableConfigurationProperties({
-    PrimitiveTypesProperties.class, ObjectTypesProperties.class, ArraysProperties.class,
-    CollectionsProperties.class, ValidatedProperties.class, ComplexTypesProperties.class,
-    HintedProperties.class
-})
 public class PropsCmdLineRunner implements CommandLineRunner {
 
     private static final Logger logger = LoggerFactory.getLogger(PropsCmdLineRunner.class);
@@ -37,10 +32,11 @@ public class PropsCmdLineRunner implements CommandLineRunner {
     private final ValidatedProperties validated;
     private final ComplexTypesProperties complex;
     private final HintedProperties hinted;
+    private final UnitTypesProperties unit;
 
     public PropsCmdLineRunner(PrimitiveTypesProperties primitives, ObjectTypesProperties objects, ArraysProperties arrays,
             CollectionsProperties collections, ValidatedProperties validated, ComplexTypesProperties complex,
-            HintedProperties hinted) {
+            HintedProperties hinted, UnitTypesProperties unit) {
         this.primitives = primitives;
         this.objects = objects;
         this.arrays = arrays;
@@ -48,6 +44,7 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         this.validated = validated;
         this.complex = complex;
         this.hinted = hinted;
+        this.unit = unit;
     }
 
     @Override
@@ -109,6 +106,10 @@ public class PropsCmdLineRunner implements CommandLineRunner {
         logger.info("hinted names: {}", hinted.getNames());
         logger.info("hinted open option: {}", hinted.getOpenOption());
         logger.info("hinted swing component: {}", hinted.getSwingComponent());
+        logger.info("*********** UNIT ************");
+        logger.info("maturation: {}", unit.getMaturation());
+        logger.info("tick: {}", unit.getTick());
+        logger.info("storage: {}", unit.getStorage());
     }
 
 }
