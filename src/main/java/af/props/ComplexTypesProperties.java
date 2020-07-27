@@ -36,7 +36,7 @@ public class ComplexTypesProperties {
     private File aFile;
 
     /**
-     * A {@code java.nio.Path} object.
+     * A {@code java.nio.file.Path} object.
      */
     private Path aPath;
 
